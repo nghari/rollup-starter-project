@@ -6,7 +6,7 @@ module.exports = function (runner) {
   const reporter = new instanbul.Reporter();
   reporter.addAll(['lcov', 'json']);
   new MochaSpecReporter(runner);
-
+console.log(' added to test eslint');
   runner.on('end', function () {
     collector.add(global.__coverage__);
 
